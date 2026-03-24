@@ -1,9 +1,8 @@
+package SecretNumber;
 import java.util.Scanner;
 
-public class SecretNumber_If_Else {
+public class SecretNumber_Basic {
     public static void main(String[] args) {
-        System.out.println("\n---------------------------------------------------");
-
         // Generate a random number between 0 and 9
         double randomNumber = Math.random() * 10; // 3.4
         long roundedNumber = Math.round(randomNumber); // 3L
@@ -25,18 +24,16 @@ public class SecretNumber_If_Else {
         // Math.round(34.2) will return 34, which is an int, so we don't need to cast
         // it.
 
-        System.out.println("Welcome to the Secret Number Game!\nInsert number: ");
+        System.out.println("Welcome to the Secret Number Game!");
+        System.out.println("Insert number: ");
         Scanner userInput = new Scanner(System.in);
+        // C: scanf("%d", &userGuess); --- IGNORE ---
         int userGuess = userInput.nextInt();
+        // C: int userGuess; --- IGNORE ---
 
-        if (userGuess == secretNumber) {
-            System.out.println("Congratulations! You guessed the secret number!");
-        } else {
-            System.out.println("Sorry, you guessed the wrong number");
-            System.out.println("The secret number was " + secretNumber + ".");
-            System.out.println("Try again!");
-        }
-
-        System.out.println("---------------------------------------------------\n");
+        System.out.println("Your guess is: " + userGuess);
+        // C: printf("Your guess is: %d", userGuess);
+        System.out.println("The secret number is: " + secretNumber);
+        // C: printf("The secret number is: %d", secretNumber);
     }
 }

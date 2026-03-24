@@ -1,3 +1,4 @@
+package SecretNumber;
 import java.util.Scanner;
 
 public class SecretNumber_Cicle_While {
