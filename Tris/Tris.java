@@ -14,6 +14,8 @@ public class Tris {
 
         Scanner scanner = new Scanner(System.in);
 
+        int leftMoves = 9;
+
         // Game loop
         while (true) {
             // Display the board
@@ -47,6 +49,10 @@ public class Tris {
                 continue;
             }
 
+            // Decrement the number of moves left
+            leftMoves--;
+
+            // initialize won boolean variable
             boolean won = false;
 
             // Check for a win
@@ -54,19 +60,69 @@ public class Tris {
             for (int row = 0; row < board.length; row++) {
                 // Check COLUMNS
                 for (int column = 0; column < board[row].length; column++) {
-                    // Check if column is the last column
-                    if (column == board[row].length - 1) {
-                        // Set won to true if the whole row matches
-                        won = true;
-                        break;
-                    }
-
                     // Check if the current cell is empty
                     // Check if the current cell and the next cell are the same
                     if (board[row][column] == ' ' || board[row][column] != board[row][column + 1]) {
                         break;
                     }
 
+                    // Check if column is the last column
+                    // Use column - 2 because we are comparing the current cell with the next cell
+                    if (column == board[row].length - 2) {
+                        // Set won to true if the whole row matches
+                        won = true;
+                        break;
+                    }
+
+                }
+            }
+
+            // Check COLUMNS
+            for (int column = 0; column < board[0].length; column++) {
+                // Check ROWS
+                for (int row = 0; row < board.length; row++) {
+                    // Check if the current cell is empty
+                    // Check if the current cell and the next cell are the same
+                    if (board[row][column] == ' ' || board[row][column] != board[row + 1][column]) {
+                        break;
+                    }
+
+                    // Check if row is the last row
+                    // Use row - 2 because we are comparing the current cell with the next cell
+                    if (row == board.length - 2) {
+                        won = true;
+                        break;
+                    }
+                }
+            }
+
+            // Check DIAGONALS
+            // Check the first diagonal (top-left to bottom-right)
+            for (int i = 0; i < board.length; i++) {
+                if (board[i][i] == ' ' || board[i][i] != board[i + 1][i + 1]) {
+                    break;
+                }
+
+                // Check if we are at the last cell of the diagonal
+                if (i == board.length - 2) {
+                    won = true;
+                    break;
+                }
+            }
+
+            // Check the second diagonal (top-right to bottom-left)
+            for (int i = 0; i < board.length; i++) {
+                // Check if the current cell is empty
+                // Check if the current cell and the next cell are the same
+                if (board[i][board.length - 1 - i] == ' '
+                        || board[i][board.length - 1 - i] != board[i + 1][board.length - 2 - i]) {
+                    break;
+                }
+
+                // Check if we are at the last cell of the diagonal
+                if (i == board.length - 2) {
+                    won = true;
+                    break;
                 }
             }
 
@@ -76,22 +132,42 @@ public class Tris {
             // ----------
             // O | X | O
 
-            // Check COLUMNS
-            for (int column = 0; column < board[0].length; column++) {
-                // Check ROWS
-                for (int row = 0; row < board.length; row++) {
-                    // Check if row is the last row
-                    if (row == board.length - 1) {
-                        won = true;
+            // Check for a draw using leftMoves variable
+            if (leftMoves == 0) {
+                System.out.println("It's a draw!");
+                break;
+            }
+
+            // Check for remaining empty cells
+            // boolean draw = true;
+
+            // Check if there are any empty cells left on the board
+            // for (int row = 0; row < board.length; row++) {
+            //     for (int column = 0; column < board[row].length; column++) {
+            //         // Check if the current cell is empty
+            //         if (board[row][column] == ' ') {
+            //             draw = false;
+            //             break;
+            //         }
+            //     }
+
+            //     // Check if we have already found an empty cell
+            //     if (!draw) {
+            //         break;
+            //     }
+            // }
+
+            for (int row = 0; row < board.length; row++) {
+                for (int column = 0; column < board[row].length; column++) {
+                    if (board[row][column] == ' ') {
                         break;
                     }
 
-                    // Check if the current cell is empty
-                    // Check if the current cell and the next cell are the same
-                    if (board[row][column] == ' ' || board[row][column] != board[row + 1][column]) {
-                        break;
+                    // Check if we are at the last cell of the board
+                    if (row == board.length - 1 && column == board[row].length - 1) {
+                        System.out.println("It's a draw!");
+                        return;
                     }
-
                 }
             }
 
