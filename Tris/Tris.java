@@ -54,14 +54,16 @@ public class Tris {
             for (int row = 0; row < board.length; row++) {
                 // Check COLUMNS
                 for (int column = 0; column < board[row].length; column++) {
+                    // Check if column is the last column
                     if (column == board[row].length - 1) {
+                        // Set won to true if the whole row matches
                         won = true;
                         break;
                     }
 
-                    if (board[row][column] == ' ' || // Check if the current cell is empty
+                    // Check if the current cell is empty
                     // Check if the current cell and the next cell are the same
-                            board[row][column] != board[row][column + 1]) {
+                    if (board[row][column] == ' ' || board[row][column] != board[row][column + 1]) {
                         break;
                     }
 
@@ -78,20 +80,22 @@ public class Tris {
             for (int column = 0; column < board[0].length; column++) {
                 // Check ROWS
                 for (int row = 0; row < board.length; row++) {
+                    // Check if row is the last row
                     if (row == board.length - 1) {
                         won = true;
                         break;
                     }
 
-                    if (board[row][column] == ' ' || // Check if the current cell is empty
+                    // Check if the current cell is empty
                     // Check if the current cell and the next cell are the same
-                            board[row][column] != board[row + 1][column]) {
+                    if (board[row][column] == ' ' || board[row][column] != board[row + 1][column]) {
                         break;
                     }
 
                 }
             }
 
+            // Check WINNING CONDITIONS
             if (won) {
                 printBoard(board);
 
@@ -111,7 +115,9 @@ public class Tris {
         // Display the board (rows and columns)
         for (int row = 0; row < board.length; row++) { // Row
             for (int column = 0; column < board[row].length; column++) { // Column
+                // Check if it's the first column
                 if (column == 0) {
+                    // Print a space before the first column
                     System.out.print(" ");
                 }
 
@@ -123,7 +129,9 @@ public class Tris {
                     System.out.print(" | ");
                 }
 
+                // Check if it's the last column
                 if (column == board[row].length - 1) {
+                    // Print a space after the last column
                     System.out.print(" ");
                 }
             }
