@@ -10,8 +10,7 @@ public class Player {
     // Simbolo del giocatore (es. "🔵", "X", "O")
     private String symbol;
 
-    // Costruttore senza parametri: crea un giocatore con nome e simbolo non
-    // impostati (null)
+    // Costruttore senza parametri: crea un giocatore con nome e simbolo non impostati (null)
     Player() {
         this.name = null;
         this.symbol = null;
@@ -57,8 +56,14 @@ public class Player {
         return this.symbol != null && !this.symbol.isEmpty();
     }
 
-    // Stampa a console le informazioni del giocatore nel formato: "nome simbolo"
+    @Override // Override del metodo toString()
+    // Restituisce una rappresentazione testuale del giocatore nel formato: "nome con simbolo 'simbolo'"
+    public String toString() {
+        return this.name + " con simbolo '" + this.symbol + "'";
+    }
+
+    // Stampa la rappresentazione testuale del giocatore
     public void print() {
-        System.out.println(this.name + " con simbolo '" + this.symbol + "'");
+        System.out.println(this.toString());
     }
 }

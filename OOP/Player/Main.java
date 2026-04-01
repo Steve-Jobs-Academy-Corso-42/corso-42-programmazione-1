@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Crea un oggetto Player senza passare un nome (nome e simbolo inizialmente null)
+        // Crea un oggetto Player con nome e simbolo non impostati (null)
         Player p1 = new Player();
+
+        System.out.println("TO STRING" + p1.toString()); // null
 
         // Crea uno Scanner per leggere l'input dell'utente da console
         Scanner scanner = new Scanner(System.in);
