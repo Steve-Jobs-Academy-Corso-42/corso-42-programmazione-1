@@ -1,4 +1,4 @@
-package Tris;
+package Procedurali.Tris;
 import java.util.Scanner;
 
 public class TrisNoArray {

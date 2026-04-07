@@ -1,4 +1,4 @@
-package SecretNumber;
+package Esempi.SecretNumber;
 import java.util.Scanner;
 
 public class SecretNumber_If_Else {

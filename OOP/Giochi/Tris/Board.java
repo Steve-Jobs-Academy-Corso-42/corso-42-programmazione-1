@@ -1,4 +1,4 @@
-package OOP.Tris;
+package OOP.Giochi.Tris;
 
 public class Board {
     private String[][] board = {

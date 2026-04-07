@@ -1,4 +1,4 @@
-package OOP.Player;
+package OOP.Esempi.Player;
 
 // Classe che rappresenta un giocatore generico
 // Incapsula nome e simbolo come attributi privati

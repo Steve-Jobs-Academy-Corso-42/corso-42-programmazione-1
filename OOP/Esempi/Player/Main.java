@@ -1,4 +1,4 @@
-package OOP.Player;
+package OOP.Esempi.Player;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package OOP.Tris;
+package OOP.Giochi.Tris;
 
 public class Tris {
     public static void main(String[] args) {

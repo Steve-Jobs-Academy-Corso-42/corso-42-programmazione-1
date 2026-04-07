@@ -1,4 +1,4 @@
-package OOP.Tris;
+package OOP.Giochi.Tris;
 
 import java.util.Scanner;
 

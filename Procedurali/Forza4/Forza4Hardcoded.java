@@ -1,4 +1,4 @@
-package Forza4;
+package Procedurali.Forza4;
 
 import java.util.Scanner;
 
