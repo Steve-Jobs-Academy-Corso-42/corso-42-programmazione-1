@@ -1,6 +1,6 @@
 package OOP.Completi.Veicoli.demo;
 
-import OOP.Completi.Veicoli.contratti.Guidabile;
+import OOP.Completi.Veicoli.interfacce.Guidabile;
 import OOP.Completi.Veicoli.mezzi.AutoElettrica;
 import OOP.Completi.Veicoli.mezzi.FurgoneConsegne;
 

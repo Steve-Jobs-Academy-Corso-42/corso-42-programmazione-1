@@ -1,8 +1,8 @@
 package OOP.Completi.Veicoli.mezzi;
 
 import OOP.Completi.Veicoli.base.Veicolo;
-import OOP.Completi.Veicoli.contratti.Guidabile;
-import OOP.Completi.Veicoli.contratti.Ricaricabile;
+import OOP.Completi.Veicoli.interfacce.Guidabile;
+import OOP.Completi.Veicoli.interfacce.Ricaricabile;
 
 // Esempio di classe concreta che estende Veicolo e implementa due interfacce.
 public class AutoElettrica extends Veicolo implements Guidabile, Ricaricabile {

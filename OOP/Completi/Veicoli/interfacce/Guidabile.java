@@ -1,4 +1,4 @@
-package OOP.Completi.Veicoli.contratti;
+package OOP.Completi.Veicoli.interfacce;
 
 // Contratto per tutti i mezzi che possono essere guidati.
 public interface Guidabile {

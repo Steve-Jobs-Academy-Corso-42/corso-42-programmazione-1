@@ -1,7 +1,7 @@
 package OOP.Completi.Veicoli.mezzi;
 
 import OOP.Completi.Veicoli.base.Veicolo;
-import OOP.Completi.Veicoli.contratti.Guidabile;
+import OOP.Completi.Veicoli.interfacce.Guidabile;
 
 // Esempio di classe concreta che implementa solo Guidabile.
 public class FurgoneConsegne extends Veicolo implements Guidabile {
