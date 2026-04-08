@@ -15,6 +15,7 @@ public class EsempioInterfacceMain {
         // Polimorfismo: tratto mezzi diversi come Guidabile.
         Guidabile[] flotta = { tesla, ducato };
 
+        // Ciclo sui mezzi per accelera e frena, dimostrando il polimorfismo.
         for (Guidabile mezzo : flotta) {
             mezzo.accelera(30);
             mezzo.frena(10);

@@ -7,6 +7,13 @@ abstract public class User {
 
     String role;
 
+    User(String name, String surname, int age, String role) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.role = role;
+    }
+
     abstract void login();
 
     void print() {
@@ -14,12 +21,5 @@ abstract public class User {
         System.out.println("Surname: " + surname);
         System.out.println("Age: " + age);
         System.out.println("Role: " + role);
-    }
-
-    User(String name, String surname, int age, String role) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.role = role;
     }
 }

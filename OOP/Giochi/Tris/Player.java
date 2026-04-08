@@ -15,8 +15,8 @@ public class Player {
 
     void makeMove(Board board) {
         // Variabili per memorizzare l'input del giocatore
-        int inputRow;
-        int inputColumn;
+        int inputRow; // 0
+        int inputColumn; // 1
 
         do {
             // Input per riga con validazione

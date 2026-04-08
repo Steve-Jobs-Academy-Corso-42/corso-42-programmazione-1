@@ -12,23 +12,27 @@ public class Tris {
         // Inizializza il giocatore corrente a p1
         Player currentPlayer = p1;
 
-        boolean gameOver = false;
-
         // Ciclo di gioco
-        while (!gameOver) {
+        while (true) {
             // Esegui la mossa del giocatore corrente
             currentPlayer.makeMove(board);
 
             // Controlla se il giocatore corrente ha vinto
             if (board.checkWin()) {
+                // Stampa la board
+                board.print();
+
                 System.out.println("Player " + currentPlayer.name + " wins!");
-                gameOver = true;
+                break;
             }
 
             // Controlla se la partita finisce in pareggio
             if (board.checkDraw()) {
+                // Stampa la board
+                board.print();
+
                 System.out.println("It's a draw!");
-                gameOver = true;
+                break;
             }
 
             // Cambia il giocatore corrente

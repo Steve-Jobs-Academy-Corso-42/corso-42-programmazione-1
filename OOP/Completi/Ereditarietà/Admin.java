@@ -14,5 +14,4 @@ public class Admin extends User {
         super.print();
         System.out.println("Admin printed!");
     }
-
 }
