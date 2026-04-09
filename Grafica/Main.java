@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // JFrame è la finestra vera e propria dell'applicazione.
         // Gli passiamo il titolo come stringa.
-        JFrame frame = new JFrame("PIPPO!");
+        JFrame frame = new JFrame("GINO!");
 
         frame.setSize(400, 400); // dimensioni in pixel: larghezza x altezza
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // chiude il programma quando si chiude la finestra
