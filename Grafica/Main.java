@@ -12,7 +12,7 @@ public class Main {
         // Gli passiamo il titolo come stringa.
         JFrame frame = new JFrame("PIPPO!");
 
-        frame.setSize(400, 400);                              // dimensioni in pixel: larghezza x altezza
+        frame.setSize(400, 400); // dimensioni in pixel: larghezza x altezza
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // chiude il programma quando si chiude la finestra
 
         // CustomPanel è il nostro "foglio da disegno" (estende JPanel).
@@ -20,7 +20,8 @@ public class Main {
         CustomPanel panel = new CustomPanel();
         frame.add(panel);
 
-        // Rendiamo la finestra visibile: solo ora Java chiama paintComponent() per la prima volta.
+        // Rendiamo la finestra visibile: solo ora Java chiama paintComponent() per la
+        // prima volta.
         frame.setVisible(true);
 
         // MouseAdapter ci permette di ascoltare i click del mouse sul pannello.
@@ -34,18 +35,19 @@ public class Main {
                 // Convertiamo le coordinate pixel in numero di cella (0, 1 o 2).
                 // Ogni cella è larga/alta 100px, quindi dividendo per 100 otteniamo l'indice.
                 int colonna = Math.round(x / 100);
-                int riga    = Math.round(y / 100);
+                int riga = Math.round(y / 100);
 
-                // Ricalcoliamo le coordinate in pixel dell'angolo in alto a sinistra della cella
-                int r = riga    * 100;
+                // Ricalcoliamo le coordinate in pixel dell'angolo in alto a sinistra della
+                // cella
+                int r = riga * 100;
                 int c = colonna * 100;
 
                 // Disegniamo una X nella cella cliccata:
                 // due diagonali che si incrociano nel centro della cella.
                 // Un margine di 10px rende la X più piccola della cella.
-                Graphics g = panel.getGino();
-                g.drawLine(c + 10, r + 10, c + 90, r + 90); // diagonale \
-                g.drawLine(c + 90, r + 10, c + 10, r + 90); // diagonale /
+                Graphics gino = panel.getGino();
+                gino.drawLine(c + 10, r + 10, c + 90, r + 90); // diagonale \
+                gino.drawLine(c + 90, r + 10, c + 10, r + 90); // diagonale /
             }
         });
     }
