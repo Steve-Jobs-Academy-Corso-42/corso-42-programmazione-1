@@ -12,7 +12,7 @@ public class Main {
         // Gli passiamo il titolo come stringa.
         JFrame frame = new JFrame("GINO!");
 
-        frame.setSize(400, 400); // dimensioni in pixel: larghezza x altezza
+        frame.setSize(300, 300); // dimensioni in pixel: larghezza x altezza
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // chiude il programma quando si chiude la finestra
 
         // CustomPanel è il nostro "foglio da disegno" (estende JPanel).
